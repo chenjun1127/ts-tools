@@ -3,7 +3,7 @@ export function throttle<T extends (...args: any[]) => any>(func: T, delay: numb
   let lastTime = 0;
   return function (...args: Parameters<T>) {
     const currentTime = Date.now();
-    if (currentTime - lastTime >= 0) {
+    if (currentTime - lastTime >= delay) {
       func.apply(this, args);
       lastTime = currentTime;
     }
