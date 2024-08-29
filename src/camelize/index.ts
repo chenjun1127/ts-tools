@@ -8,3 +8,7 @@ export function underlineToCamel(str: string) {
     return c ? c.toUpperCase() : '';
   });
 }
+
+
+console.log(camelToUnderline('helloWorld'));
+console.log(underlineToCamel('hello_world'));

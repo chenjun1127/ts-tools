@@ -11,3 +11,7 @@ export const deCrypto = (data: string) => {
   if (str) return JSON.parse(str);
   return null;
 };
+
+var a = enCrypto({ a: 1, b: 2 });
+console.log(a);
+console.log(deCrypto(a));
